@@ -1,5 +1,7 @@
 import express from 'express';
 import http from 'http';
+import https from 'https';
+import fs from 'fs';
 import { Server } from 'socket.io';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -12,7 +14,15 @@ const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
 const HOST = process.env.HOST || '0.0.0.0';
 
 const app = express();
-const server = http.createServer(app);
+
+let server;
+if (process.env.TLS_CERT_FILE && process.env.TLS_KEY_FILE) {
+  const privateKey = fs.readFileSync(process.env.TLS_KEY_FILE, 'utf8');
+  const certificate = fs.readFileSync(process.env.TLS_CERT_FILE, 'utf8');
+  server = https.createServer({ key: privateKey, cert: certificate }, app);
+} else {
+  server = http.createServer(app);
+}
 
 const io = new Server<ClientToServerEvents, ServerToClientEvents>(server, {
   cors: {

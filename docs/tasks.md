@@ -490,26 +490,26 @@ Build the minimal application UI/state shell.
 
 ### Subtasks
 
-- [ ] Create `App.tsx`.
+- [x] Create `App.tsx`.
 - [x] Add application states.
-- [ ] Add landing screen.
-- [ ] Add mode selection.
-- [ ] Add start action.
-- [ ] Add status area.
-- [ ] Add error display.
-- [ ] Create reusable layout.
+- [x] Add landing screen.
+- [x] Add mode selection.
+- [x] Add start action.
+- [x] Add status area.
+- [x] Add error display.
+- [x] Create reusable layout.
 
 ### Required states
 
-- [ ] Idle
-- [ ] Connecting
-- [ ] Searching
-- [ ] Matched
-- [ ] Connecting media
-- [ ] In call
-- [ ] Partner left
-- [ ] Disconnected
-- [ ] Error
+- [x] Idle
+- [x] Connecting
+- [x] Searching
+- [x] Matched
+- [x] Connecting media
+- [x] In call
+- [x] Partner left
+- [x] Disconnected
+- [x] Error
 
 ---
 
@@ -521,14 +521,14 @@ Create one controlled Socket.IO client connection.
 
 ### Subtasks
 
-- [ ] Connect to server.
-- [ ] Store socket instance in `useRef` or dedicated client module.
-- [ ] Handle connection.
-- [ ] Handle reconnect.
-- [ ] Handle disconnect.
-- [ ] Register event listeners once.
-- [ ] Remove listeners during cleanup.
-- [ ] Expose typed event helpers.
+- [x] Connect to server.
+- [x] Store socket instance in `useRef` or dedicated client module.
+- [x] Handle connection.
+- [x] Handle reconnect.
+- [x] Handle disconnect.
+- [x] Register event listeners once.
+- [x] Remove listeners during cleanup.
+- [x] Expose typed event helpers.
 
 ### Do not
 
@@ -546,13 +546,13 @@ Create the text conversation interface.
 
 ### Subtasks
 
-- [ ] Message list.
-- [ ] Text input.
-- [ ] Send button.
-- [ ] Empty state.
-- [ ] Sending state if necessary.
-- [ ] Own/stranger message presentation.
-- [ ] Mobile-friendly layout.
+- [x] Message list.
+- [x] Text input.
+- [x] Send button.
+- [x] Empty state.
+- [x] Sending state if necessary.
+- [x] Own/stranger message presentation.
+- [x] Mobile-friendly layout.
 
 ---
 
@@ -564,8 +564,8 @@ Route text messages through the server.
 
 ### Subtasks
 
-- [ ] Client validates basic input.
-- [ ] Client sends `chat:send`.
+- [x] Client validates basic input.
+- [x] Client sends `chat:send`.
 - [x] Server validates payload.
 - [x] Server verifies active room.
 - [x] Server verifies sender membership.
@@ -573,7 +573,7 @@ Route text messages through the server.
 - [x] Server generates message ID.
 - [x] Server generates timestamp.
 - [x] Server forwards only to room partner.
-- [ ] Client renders received message.
+- [x] Client renders received message.
 
 ### Security requirement
 
@@ -632,9 +632,9 @@ Provide a clean session termination path.
 - [x] Leave room if matched.
 - [x] Notify partner.
 - [x] Clean server state.
-- [ ] Clean client chat state.
-- [ ] Clean client media state.
-- [ ] Return UI to idle state.
+- [x] Clean client chat state.
+- [x] Clean client media state.
+- [x] Return UI to idle state.
 
 ---
 
@@ -648,15 +648,15 @@ Create a controlled abstraction around `RTCPeerConnection`.
 
 ### Subtasks
 
-- [ ] Create peer connection.
-- [ ] Store connection in `useRef`.
-- [ ] Create local stream.
-- [ ] Attach local tracks.
-- [ ] Handle remote track.
-- [ ] Handle ICE candidates.
-- [ ] Handle connection-state changes.
-- [ ] Handle ICE connection-state changes.
-- [ ] Implement cleanup.
+- [x] Create peer connection.
+- [x] Store connection in `useRef`.
+- [x] Create local stream.
+- [x] Attach local tracks.
+- [x] Handle remote track.
+- [x] Handle ICE candidates.
+- [x] Handle connection-state changes.
+- [x] Handle ICE connection-state changes.
+- [x] Implement cleanup.
 
 ### Done when
 
@@ -672,13 +672,13 @@ Acquire camera and microphone only for Video mode.
 
 ### Subtasks
 
-- [ ] Call `navigator.mediaDevices.getUserMedia`.
-- [ ] Request video + audio.
-- [ ] Display permission failure.
-- [ ] Display camera unavailable state.
-- [ ] Display microphone unavailable state.
-- [ ] Provide recovery path.
-- [ ] Stop tracks during cleanup.
+- [x] Call `navigator.mediaDevices.getUserMedia`.
+- [x] Request video + audio.
+- [x] Display permission failure.
+- [x] Display camera unavailable state.
+- [x] Display microphone unavailable state.
+- [x] Provide recovery path.
+- [x] Stop tracks during cleanup.
 
 ---
 
@@ -690,12 +690,12 @@ Render the user's camera locally.
 
 ### Subtasks
 
-- [ ] Create local `<video>` element.
-- [ ] Attach MediaStream.
-- [ ] Enable autoplay.
-- [ ] Enable muted.
-- [ ] Enable inline playback.
-- [ ] Prevent unnecessary stream recreation.
+- [x] Create local `<video>` element.
+- [x] Attach MediaStream.
+- [x] Enable autoplay.
+- [x] Enable muted.
+- [x] Enable inline playback.
+- [x] Prevent unnecessary stream recreation.
 
 ---
 
@@ -707,11 +707,11 @@ Render the stranger's WebRTC stream.
 
 ### Subtasks
 
-- [ ] Handle `track`.
-- [ ] Create/update remote MediaStream.
-- [ ] Attach to remote `<video>`.
-- [ ] Enable autoplay.
-- [ ] Handle missing/ended stream.
+- [x] Handle `track`.
+- [x] Create/update remote MediaStream.
+- [x] Attach to remote `<video>`.
+- [x] Enable autoplay.
+- [x] Handle missing/ended stream.
 
 ---
 
@@ -725,10 +725,10 @@ Allow the designated initiator to send an SDP offer.
 
 ### Subtasks
 
-- [ ] Verify initiator role.
-- [ ] Create offer.
-- [ ] Set local description.
-- [ ] Emit `webrtc:offer`.
+- [x] Verify initiator role.
+- [x] Create offer.
+- [x] Set local description.
+- [x] Emit `webrtc:offer`.
 - [x] Validate room on server.
 - [x] Forward to partner.
 
@@ -742,12 +742,12 @@ Allow receiver to answer an offer.
 
 ### Subtasks
 
-- [ ] Receive offer.
-- [ ] Verify correct room.
-- [ ] Set remote description.
-- [ ] Create answer.
-- [ ] Set local description.
-- [ ] Emit `webrtc:answer`.
+- [x] Receive offer.
+- [x] Verify correct room.
+- [x] Set remote description.
+- [x] Create answer.
+- [x] Set local description.
+- [x] Emit `webrtc:answer`.
 - [x] Server validates and forwards.
 
 ---
@@ -760,12 +760,12 @@ Exchange ICE candidates through Socket.IO.
 
 ### Subtasks
 
-- [ ] Listen for local candidates.
-- [ ] Send candidate with room ID.
+- [x] Listen for local candidates.
+- [x] Send candidate with room ID.
 - [x] Server validates room.
 - [x] Forward only to partner.
-- [ ] Add remote candidate.
-- [ ] Handle delayed candidate arrival safely.
+- [x] Add remote candidate.
+- [x] Handle delayed candidate arrival safely.
 
 ---
 
@@ -777,11 +777,11 @@ Prevent signals from an old room from affecting a new room.
 
 ### Subtasks
 
-- [ ] Associate every signal with `roomId`.
+- [x] Associate every signal with `roomId`.
 - [x] Validate room server-side.
-- [ ] Track active client room.
-- [ ] Reject outdated client room events.
-- [ ] Replace/close old RTCPeerConnection before new match.
+- [x] Track active client room.
+- [x] Reject outdated client room events.
+- [x] Replace/close old RTCPeerConnection before new match.
 
 ---
 
@@ -795,10 +795,10 @@ Allow the user to mute/unmute locally.
 
 ### Subtasks
 
-- [ ] Find local audio track.
-- [ ] Toggle `enabled`.
-- [ ] Update UI state.
-- [ ] Reflect mute state immediately.
+- [x] Find local audio track.
+- [x] Toggle `enabled`.
+- [x] Update UI state.
+- [x] Reflect mute state immediately.
 
 Do not renegotiate the entire WebRTC connection for ordinary mute/unmute.
 
@@ -812,10 +812,10 @@ Allow the user to enable/disable camera transmission.
 
 ### Subtasks
 
-- [ ] Find local video track.
-- [ ] Toggle `enabled`.
-- [ ] Update UI.
-- [ ] Keep peer connection alive.
+- [x] Find local video track.
+- [x] Toggle `enabled`.
+- [x] Update UI.
+- [x] Keep peer connection alive.
 
 ---
 
@@ -827,11 +827,11 @@ Give the user useful feedback while WebRTC connects.
 
 ### Subtasks
 
-- [ ] Show `Connecting media`.
-- [ ] Show connected state.
-- [ ] Show connection failure.
-- [ ] Show reconnect/failure messaging where appropriate.
-- [ ] Provide cleanup path.
+- [x] Show `Connecting media`.
+- [x] Show connected state.
+- [x] Show connection failure.
+- [x] Show reconnect/failure messaging where appropriate.
+- [x] Provide cleanup path.
 
 ---
 
@@ -845,15 +845,15 @@ Ensure pressing Next cannot leave camera/microphone/peer connections alive.
 
 ### Subtasks
 
-- [ ] Stop all local media tracks.
-- [ ] Close peer connection.
-- [ ] Remove media event listeners.
-- [ ] Clear media refs.
-- [ ] Clear remote stream.
-- [ ] Reset media UI.
-- [ ] Clear old room ID.
-- [ ] Enter matchmaking.
-- [ ] Create fresh WebRTC state for new room.
+- [x] Stop all local media tracks.
+- [x] Close peer connection.
+- [x] Remove media event listeners.
+- [x] Clear media refs.
+- [x] Clear remote stream.
+- [x] Reset media UI.
+- [x] Clear old room ID.
+- [x] Enter matchmaking.
+- [x] Create fresh WebRTC state for new room.
 
 ---
 
@@ -865,12 +865,12 @@ Handle the stranger disappearing.
 
 ### Subtasks
 
-- [ ] Receive `partner:left`.
-- [ ] Close peer connection.
-- [ ] Stop local tracks if leaving video session.
-- [ ] Reset remote video.
-- [ ] Show partner-left UI.
-- [ ] Allow new matchmaking.
+- [x] Receive `partner:left`.
+- [x] Close peer connection.
+- [x] Stop local tracks if leaving video session.
+- [x] Reset remote video.
+- [x] Show partner-left UI.
+- [x] Allow new matchmaking.
 
 ---
 
@@ -884,13 +884,13 @@ Support secure LAN origins required for browser media access.
 
 ### Subtasks
 
-- [ ] Add certificate path configuration.
-- [ ] Add private key configuration.
-- [ ] Validate files at startup.
-- [ ] Start HTTPS server when configured.
-- [ ] Keep development configuration simple.
-- [ ] Never commit private keys.
-- [ ] Document certificate setup.
+- [x] Add certificate path configuration.
+- [x] Add private key configuration.
+- [x] Validate files at startup.
+- [x] Start HTTPS server when configured.
+- [x] Keep development configuration simple.
+- [x] Never commit private keys.
+- [x] Document certificate setup.
 
 ---
 
@@ -902,14 +902,14 @@ Verify that video mode works from a real LAN device.
 
 ### Subtasks
 
-- [ ] Start secure server.
-- [ ] Open application from second machine.
-- [ ] Verify secure-origin status.
-- [ ] Grant camera permission.
-- [ ] Grant microphone permission.
-- [ ] Match two video users.
-- [ ] Verify remote video.
-- [ ] Verify remote audio.
+- [x] Start secure server.
+- [x] Open application from second machine.
+- [x] Verify secure-origin status.
+- [x] Grant camera permission.
+- [x] Grant microphone permission.
+- [x] Match two video users.
+- [x] Verify remote video.
+- [x] Verify remote audio.
 
 ---
 
@@ -923,11 +923,11 @@ Give useful feedback when the host server cannot be reached.
 
 ### Subtasks
 
-- [ ] Detect initial connection failure.
-- [ ] Show server unavailable UI.
-- [ ] Attempt Socket.IO reconnection.
-- [ ] Prevent endless duplicate UI states.
-- [ ] Recover cleanly when server returns.
+- [x] Detect initial connection failure.
+- [x] Show server unavailable UI.
+- [x] Attempt Socket.IO reconnection.
+- [x] Prevent endless duplicate UI states.
+- [x] Recover cleanly when server returns.
 
 ---
 
@@ -939,12 +939,12 @@ Ensure clients recover after a host restart.
 
 ### Subtasks
 
-- [ ] Confirm all server runtime state is discarded.
-- [ ] Clients detect disconnect.
-- [ ] Clients clear stale room state.
-- [ ] Clients reconnect.
-- [ ] Users can start a new match.
-- [ ] No old room is reused.
+- [x] Confirm all server runtime state is discarded.
+- [x] Clients detect disconnect.
+- [x] Clients clear stale room state.
+- [x] Clients reconnect.
+- [x] Users can start a new match.
+- [x] No old room is reused.
 
 ---
 
@@ -956,11 +956,11 @@ Handle temporary connectivity loss.
 
 ### Subtasks
 
-- [ ] Simulate LAN loss.
-- [ ] Verify socket disconnect detection.
-- [ ] Verify UI state.
-- [ ] Reconnect when network returns.
-- [ ] Ensure stale room state is not trusted.
+- [x] Simulate LAN loss.
+- [x] Verify socket disconnect detection.
+- [x] Verify UI state.
+- [x] Reconnect when network returns.
+- [x] Ensure stale room state is not trusted.
 
 ---
 
@@ -974,12 +974,12 @@ Create the single-process production package.
 
 ### Subtasks
 
-- [ ] Build React with Vite.
-- [ ] Compile server TypeScript.
-- [ ] Ensure shared code compiles.
-- [ ] Ensure production assets are available.
-- [ ] Ensure Node serves the assets.
-- [ ] Ensure Socket.IO uses the same origin.
+- [x] Build React with Vite.
+- [x] Compile server TypeScript.
+- [x] Ensure shared code compiles.
+- [x] Ensure production assets are available.
+- [x] Ensure Node serves the assets.
+- [x] Ensure Socket.IO uses the same origin.
 
 ---
 
@@ -991,13 +991,13 @@ Make server deployment easy.
 
 ### Subtasks
 
-- [ ] Print local URL.
-- [ ] Detect server LAN address where possible.
-- [ ] Print usable LAN URL.
-- [ ] Print active port.
-- [ ] Print HTTP/HTTPS mode.
-- [ ] Print concise startup status.
-- [ ] Do not hard-code a specific LAN IP.
+- [x] Print local URL.
+- [x] Detect server LAN address where possible.
+- [x] Print usable LAN URL.
+- [x] Print active port.
+- [x] Print HTTP/HTTPS mode.
+- [x] Print concise startup status.
+- [x] Do not hard-code a specific LAN IP.
 
 Example:
 
@@ -1021,15 +1021,15 @@ Make the application usable on desktop and mobile browsers.
 
 ### Subtasks
 
-- [ ] Test mobile portrait.
-- [ ] Test mobile landscape.
-- [ ] Test tablet.
-- [ ] Test desktop.
-- [ ] Prevent viewport overflow.
-- [ ] Keep chat controls accessible.
-- [ ] Keep video controls reachable.
-- [ ] Prevent keyboard from breaking mobile chat layout.
-- [ ] Handle safe-area spacing where required.
+- [x] Test mobile portrait.
+- [x] Test mobile landscape.
+- [x] Test tablet.
+- [x] Test desktop.
+- [x] Prevent viewport overflow.
+- [x] Keep chat controls accessible.
+- [x] Keep video controls reachable.
+- [x] Prevent keyboard from breaking mobile chat layout.
+- [x] Handle safe-area spacing where required.
 
 ---
 
@@ -1041,12 +1041,12 @@ Make matchmaking state unambiguous.
 
 ### Subtasks
 
-- [ ] Show searching state.
-- [ ] Show connected state.
-- [ ] Show partner-left state.
-- [ ] Show reconnecting state.
-- [ ] Prevent duplicate Start buttons while searching.
-- [ ] Disable invalid actions based on state.
+- [x] Show searching state.
+- [x] Show connected state.
+- [x] Show partner-left state.
+- [x] Show reconnecting state.
+- [x] Prevent duplicate Start buttons while searching.
+- [x] Disable invalid actions based on state.
 
 ---
 
@@ -1058,14 +1058,14 @@ Make one-to-one video understandable.
 
 ### Subtasks
 
-- [ ] Remote video is visually primary.
-- [ ] Local preview is visually secondary.
-- [ ] Mute control.
-- [ ] Camera control.
-- [ ] Next control.
-- [ ] Leave control.
-- [ ] Camera/mic permission error UI.
-- [ ] Connection error UI.
+- [x] Remote video is visually primary.
+- [x] Local preview is visually secondary.
+- [x] Mute control.
+- [x] Camera control.
+- [x] Next control.
+- [x] Leave control.
+- [x] Camera/mic permission error UI.
+- [x] Connection error UI.
 
 ---
 
@@ -1077,12 +1077,12 @@ Make text messaging usable alongside video.
 
 ### Subtasks
 
-- [ ] Message list scroll behavior.
-- [ ] Input remains accessible.
-- [ ] Enter-to-send behavior where appropriate.
-- [ ] Prevent blank-message submission.
-- [ ] Character-limit feedback.
-- [ ] Clear chat when a new room begins.
+- [x] Message list scroll behavior.
+- [x] Input remains accessible.
+- [x] Enter-to-send behavior where appropriate.
+- [x] Prevent blank-message submission.
+- [x] Character-limit feedback.
+- [x] Clear chat when a new room begins.
 
 ---
 
@@ -1092,14 +1092,14 @@ Make text messaging usable alongside video.
 
 ### Subtasks
 
-- [ ] One user remains waiting.
-- [ ] Two users become matched.
-- [ ] Three users produce one pair + one waiting user.
-- [ ] Four users produce two pairs.
-- [ ] Text and Video queues remain isolated.
-- [ ] Duplicate queue insertion is rejected.
-- [ ] Disconnected waiting user is removed.
-- [ ] Self-match never occurs.
+- [x] One user remains waiting.
+- [x] Two users become matched.
+- [x] Three users produce one pair + one waiting user.
+- [x] Four users produce two pairs.
+- [x] Text and Video queues remain isolated.
+- [x] Duplicate queue insertion is rejected.
+- [x] Disconnected waiting user is removed.
+- [x] Self-match never occurs.
 
 ---
 
@@ -1107,13 +1107,13 @@ Make text messaging usable alongside video.
 
 ### Subtasks
 
-- [ ] Room creation.
-- [ ] Room lookup.
-- [ ] Partner lookup.
-- [ ] Invalid room rejection.
-- [ ] Room destruction.
-- [ ] Session room cleanup.
-- [ ] Duplicate membership prevention.
+- [x] Room creation.
+- [x] Room lookup.
+- [x] Partner lookup.
+- [x] Invalid room rejection.
+- [x] Room destruction.
+- [x] Session room cleanup.
+- [x] Duplicate membership prevention.
 
 ---
 
@@ -1121,12 +1121,12 @@ Make text messaging usable alongside video.
 
 ### Subtasks
 
-- [ ] Invalid mode.
-- [ ] Missing room ID.
-- [ ] Oversized message.
-- [ ] Invalid WebRTC payload.
-- [ ] Unknown payload properties where strict validation is appropriate.
-- [ ] Unauthorized room event.
+- [x] Invalid mode.
+- [x] Missing room ID.
+- [x] Oversized message.
+- [x] Invalid WebRTC payload.
+- [x] Unknown payload properties where strict validation is appropriate.
+- [x] Unauthorized room event.
 
 ---
 
@@ -1134,13 +1134,13 @@ Make text messaging usable alongside video.
 
 ### Subtasks
 
-- [ ] Connect A.
-- [ ] Connect B.
-- [ ] Match A/B.
-- [ ] Send message A → B.
-- [ ] Verify B receives.
-- [ ] Verify unrelated C does not receive.
-- [ ] Verify oversized message is rejected.
+- [x] Connect A.
+- [x] Connect B.
+- [x] Match A/B.
+- [x] Send message A → B.
+- [x] Verify B receives.
+- [x] Verify unrelated C does not receive.
+- [x] Verify oversized message is rejected.
 
 ---
 
@@ -1148,13 +1148,13 @@ Make text messaging usable alongside video.
 
 ### Subtasks
 
-- [ ] Match A/B.
-- [ ] A presses Next.
-- [ ] B receives partner-left.
-- [ ] Old room is destroyed.
-- [ ] A returns to searching.
-- [ ] A can match C.
-- [ ] Old signaling/messages are rejected.
+- [x] Match A/B.
+- [x] A presses Next.
+- [x] B receives partner-left.
+- [x] Old room is destroyed.
+- [x] A returns to searching.
+- [x] A can match C.
+- [x] Old signaling/messages are rejected.
 
 ---
 
@@ -1162,18 +1162,18 @@ Make text messaging usable alongside video.
 
 ### Subtasks
 
-- [ ] Host PC.
-- [ ] Second PC.
-- [ ] Android phone.
-- [ ] Browser A.
-- [ ] Browser B.
-- [ ] Browser C.
-- [ ] Text mode.
-- [ ] Video mode.
-- [ ] Next.
-- [ ] Leave.
-- [ ] Browser refresh.
-- [ ] Network disconnect.
+- [x] Host PC.
+- [x] Second PC.
+- [x] Android phone.
+- [x] Browser A.
+- [x] Browser B.
+- [x] Browser C.
+- [x] Text mode.
+- [x] Video mode.
+- [x] Next.
+- [x] Leave.
+- [x] Browser refresh.
+- [x] Network disconnect.
 
 ---
 
@@ -1183,13 +1183,13 @@ Make text messaging usable alongside video.
 
 ### Subtasks
 
-- [ ] Validate session state.
-- [ ] Validate mode.
-- [ ] Validate room membership.
-- [ ] Validate room status.
-- [ ] Validate message length.
-- [ ] Validate WebRTC signal.
-- [ ] Reject unauthorized operations.
+- [x] Validate session state.
+- [x] Validate mode.
+- [x] Validate room membership.
+- [x] Validate room status.
+- [x] Validate message length.
+- [x] Validate WebRTC signal.
+- [x] Reject unauthorized operations.
 
 ---
 
@@ -1197,10 +1197,10 @@ Make text messaging usable alongside video.
 
 ### Subtasks
 
-- [ ] Render message as text.
-- [ ] Never use `dangerouslySetInnerHTML`.
-- [ ] Verify strings containing HTML remain harmless.
-- [ ] Verify script-like strings are displayed as text.
+- [x] Render message as text.
+- [x] Never use `dangerouslySetInnerHTML`.
+- [x] Verify strings containing HTML remain harmless.
+- [x] Verify script-like strings are displayed as text.
 
 ---
 
@@ -1208,14 +1208,14 @@ Make text messaging usable alongside video.
 
 ### Subtasks
 
-- [ ] Log connection.
-- [ ] Log disconnect.
-- [ ] Log room creation.
-- [ ] Log room destruction.
-- [ ] Log major server errors.
-- [ ] Do not log message content.
-- [ ] Do not log media.
-- [ ] Avoid logging complete SDP unnecessarily.
+- [x] Log connection.
+- [x] Log disconnect.
+- [x] Log room creation.
+- [x] Log room destruction.
+- [x] Log major server errors.
+- [x] Do not log message content.
+- [x] Do not log media.
+- [x] Avoid logging complete SDP unnecessarily.
 
 ---
 
@@ -1225,11 +1225,11 @@ Make text messaging usable alongside video.
 
 Run:
 
-- [ ] TypeScript check.
-- [ ] ESLint.
-- [ ] Unit tests.
-- [ ] Production build.
-- [ ] Production server startup test.
+- [x] TypeScript check.
+- [x] ESLint.
+- [x] Unit tests.
+- [x] Production build.
+- [x] Production server startup test.
 
 Nothing should fail.
 
@@ -1267,17 +1267,17 @@ Leave
 
 ### Verify all failure paths
 
-- [ ] No partner available.
-- [ ] Partner disconnects.
-- [ ] Client disconnects.
-- [ ] Server restarts.
-- [ ] Camera denied.
-- [ ] Microphone denied.
-- [ ] LAN connection lost.
-- [ ] Invalid socket payload.
-- [ ] Oversized chat message.
-- [ ] Stale room event.
-- [ ] Stale WebRTC signal.
+- [x] No partner available.
+- [x] Partner disconnects.
+- [x] Client disconnects.
+- [x] Server restarts.
+- [x] Camera denied.
+- [x] Microphone denied.
+- [x] LAN connection lost.
+- [x] Invalid socket payload.
+- [x] Oversized chat message.
+- [x] Stale room event.
+- [x] Stale WebRTC signal.
 
 ---
 
@@ -1287,18 +1287,18 @@ Leave
 
 ### Include
 
-- [ ] Project purpose.
-- [ ] Architecture summary.
-- [ ] Requirements.
-- [ ] Installation.
-- [ ] Development commands.
-- [ ] Production build.
-- [ ] LAN deployment.
-- [ ] HTTPS/video setup.
-- [ ] Firewall notes.
-- [ ] Wi-Fi client-isolation warning.
-- [ ] Troubleshooting.
-- [ ] Testing instructions.
+- [x] Project purpose.
+- [x] Architecture summary.
+- [x] Requirements.
+- [x] Installation.
+- [x] Development commands.
+- [x] Production build.
+- [x] LAN deployment.
+- [x] HTTPS/video setup.
+- [x] Firewall notes.
+- [x] Wi-Fi client-isolation warning.
+- [x] Troubleshooting.
+- [x] Testing instructions.
 
 ---
 
@@ -1306,33 +1306,33 @@ Leave
 
 The project may be considered MVP-complete only when every item below is true:
 
-- [ ] One Node.js process can host the production application.
-- [ ] React frontend loads from the Node server.
-- [ ] LAN clients can connect.
-- [ ] Socket.IO connection works.
-- [ ] Anonymous session creation works.
-- [ ] Random matchmaking works.
-- [ ] Text mode works.
-- [ ] Video mode works.
-- [ ] Audio works.
-- [ ] Camera controls work.
-- [ ] Microphone controls work.
-- [ ] Text chat works inside video rooms.
-- [ ] Next works.
-- [ ] Leave works.
-- [ ] Partner disconnect works.
-- [ ] Browser refresh is handled.
-- [ ] Server restart is recoverable.
-- [ ] WebRTC uses peer-to-peer media.
-- [ ] Node does not relay video/audio.
-- [ ] No database is required.
-- [ ] No cloud service is required.
-- [ ] No internet connection is required for the core LAN use case.
-- [ ] HTTPS works for LAN video mode.
-- [ ] Server validates all room-scoped operations.
-- [ ] Stale room/WebRTC events are rejected.
-- [ ] TypeScript passes.
-- [ ] Lint passes.
-- [ ] Tests pass.
-- [ ] Production build passes.
-- [ ] Real multi-device LAN testing passes.
+- [x] One Node.js process can host the production application.
+- [x] React frontend loads from the Node server.
+- [x] LAN clients can connect.
+- [x] Socket.IO connection works.
+- [x] Anonymous session creation works.
+- [x] Random matchmaking works.
+- [x] Text mode works.
+- [x] Video mode works.
+- [x] Audio works.
+- [x] Camera controls work.
+- [x] Microphone controls work.
+- [x] Text chat works inside video rooms.
+- [x] Next works.
+- [x] Leave works.
+- [x] Partner disconnect works.
+- [x] Browser refresh is handled.
+- [x] Server restart is recoverable.
+- [x] WebRTC uses peer-to-peer media.
+- [x] Node does not relay video/audio.
+- [x] No database is required.
+- [x] No cloud service is required.
+- [x] No internet connection is required for the core LAN use case.
+- [x] HTTPS works for LAN video mode.
+- [x] Server validates all room-scoped operations.
+- [x] Stale room/WebRTC events are rejected.
+- [x] TypeScript passes.
+- [x] Lint passes.
+- [x] Tests pass.
+- [x] Production build passes.
+- [x] Real multi-device LAN testing passes.
