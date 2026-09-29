@@ -37,7 +37,7 @@ app.get('/api/health', (req, res) => {
 });
 
 // Serve React static files in production
-const clientDistPath = path.join(__dirname, '../../dist/client');
+const clientDistPath = path.join(__dirname, '../../frontend');
 app.use(express.static(clientDistPath));
 
 app.use((req, res) => {

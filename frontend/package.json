@@ -1,0 +1,16 @@
+{
+  "name": "@zomagle/frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "postcss.config.js",
+  "scripts": {
+    "dev": "vite --host --force",
+    "build": "vite build",
+    "start": "vite preview --host",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}

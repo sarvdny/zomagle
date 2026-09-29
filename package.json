@@ -7,12 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "dev": "concurrently \"vite --host --force\" \"tsx watch server/index.ts\"",
-    "dev:client": "vite --host --force",
-    "dev:server": "tsx watch server/index.ts",
-    "build": "vite build && tsc -p tsconfig.server.json",
-    "start": "node dist/server/server/index.js",
-    "typecheck": "tsc --noEmit && tsc -p tsconfig.server.json --noEmit",
+    "dev": "concurrently \"npm run dev -w @zomagle/frontend\" \"npm run dev -w @zomagle/backend\"",
+    "build": "npm run build -w @zomagle/frontend && npm run build -w @zomagle/backend",
+    "start": "npm run start -w @zomagle/backend",
     "lint": "eslint .",
     "test": "vitest run"
   },
@@ -21,6 +18,7 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "@supabase/supabase-js": "^2.117.2",
     "express": "^5.2.1",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
@@ -52,5 +50,10 @@
     "typescript-eslint": "^8.70.1",
     "vite": "^8.3.1",
     "vitest": "^5.0.2"
-  }
+  },
+  "workspaces": [
+    "frontend",
+    "backend",
+    "shared"
+  ]
 }

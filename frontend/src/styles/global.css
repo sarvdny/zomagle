@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-background: #000000;
+    --color-foreground: #ffffff;
+    --color-accent: #39ff14;
+    --color-accent-foreground: #000000;
+    --color-destructive: #ff0000;
+    --color-destructive-foreground: #ffffff;
+    --color-muted: #222222;
+    --color-muted-foreground: #888888;
+    --color-border: #ffffff;
+    
+    --font-display: "Archivo Black", "Arial Black", sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+    --font-sans: "JetBrains Mono", ui-monospace, monospace;
+  }
+
+  * {
+    border-color: var(--color-border);
+    border-radius: 0 !important;
+  }
+
+  html,
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-mono);
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-accent-foreground);
+  }
+}
+
+@layer components {
+  .brutal-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.04em;
+    line-height: 0.82;
+    text-transform: uppercase;
+  }
+
+  .lobby-block {
+    @apply flex items-center justify-center w-full h-full bg-[var(--color-background)] text-[var(--color-foreground)] cursor-pointer;
+    transition: background-color 80ms steps(1, end), color 80ms steps(1, end);
+  }
+
+  .lobby-block:hover,
+  .lobby-block:focus-visible {
+    @apply bg-[var(--color-foreground)] text-[var(--color-background)] outline-none;
+  }
+
+  .lobby-block:active {
+    @apply bg-[var(--color-accent)] text-[var(--color-accent-foreground)];
+  }
+
+  .brutal-btn {
+    @apply inline-flex items-center justify-center gap-2 border-[4px] border-[var(--color-foreground)] bg-[var(--color-background)] text-[var(--color-foreground)] font-mono font-bold uppercase tracking-widest px-6 py-3 cursor-pointer;
+    transition: background-color 60ms steps(1, end), color 60ms steps(1, end);
+  }
+
+  .brutal-btn:hover {
+    @apply bg-[var(--color-foreground)] text-[var(--color-background)];
+  }
+
+  .brutal-btn:active {
+    @apply bg-[var(--color-accent)] text-[var(--color-accent-foreground)] border-[var(--color-accent)];
+  }
+
+  .brutal-btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+  }
+
+  .brutal-btn-accent {
+    @apply bg-[var(--color-accent)] text-[var(--color-accent-foreground)] border-[var(--color-accent)];
+  }
+
+  .brutal-btn-accent:hover {
+    @apply bg-[var(--color-background)] text-[var(--color-accent)];
+  }
+
+  .brutal-btn-danger {
+    @apply bg-[var(--color-destructive)] text-[var(--color-destructive-foreground)] border-[var(--color-destructive)];
+  }
+
+  .brutal-btn-danger:hover {
+    @apply bg-[var(--color-background)] text-[var(--color-destructive)];
+  }
+
+  .brutal-btn-on {
+    @apply bg-[var(--color-accent)] text-[var(--color-accent-foreground)] border-[var(--color-accent)];
+  }
+}
+
+@layer utilities {
+  .animate-hard-blink {
+    animation: hard-blink 0.6s steps(1, end) infinite;
+  }
+}
+
+@keyframes hard-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}

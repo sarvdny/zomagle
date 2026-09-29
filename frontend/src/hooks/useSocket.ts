@@ -1,20 +1,25 @@
 import { useEffect, useRef, useState } from 'react';
 import { io, Socket } from 'socket.io-client';
 import { ClientToServerEvents, ServerToClientEvents } from '@shared/events.js';
+import { SupabaseSocket } from '../lib/SupabaseSocket.js';
 
-let socketInstance: Socket<ServerToClientEvents, ClientToServerEvents> | null = null;
+let socketInstance: any = null;
 
 export const getSocket = () => {
   if (!socketInstance) {
-    socketInstance = io({
-      autoConnect: false,
-    });
+    if (import.meta.env.VITE_BACKEND_TYPE === 'supabase') {
+      socketInstance = new SupabaseSocket();
+    } else {
+      socketInstance = io({
+        autoConnect: false,
+      });
+    }
   }
   return socketInstance;
 };
 
 export function useSocket() {
-  const socketRef = useRef<Socket<ServerToClientEvents, ClientToServerEvents>>(getSocket());
+  const socketRef = useRef<any>(getSocket());
   const [isConnected, setIsConnected] = useState(socketRef.current.connected);
 
   useEffect(() => {

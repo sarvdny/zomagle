@@ -1,22 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './client/src/**/*.{js,ts,jsx,tsx}'],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        'bg-primary': 'var(--bg-primary)',
-        'bg-secondary': 'var(--bg-secondary)',
-        'bg-tertiary': 'var(--bg-tertiary)',
-        'text-primary': 'var(--text-primary)',
-        'text-secondary': 'var(--text-secondary)',
-        'text-muted': 'var(--text-muted)',
-        'border': 'var(--border)',
-        'accent': 'var(--accent)',
-        'accent-soft': 'var(--accent-soft)',
-        'success': 'var(--success)',
-        'warning': 'var(--warning)',
-        'danger': 'var(--danger)',
+        background: 'var(--color-background)',
+        foreground: 'var(--color-foreground)',
+        accent: 'var(--color-accent)',
+        'accent-foreground': 'var(--color-accent-foreground)',
+        destructive: 'var(--color-destructive)',
+        'destructive-foreground': 'var(--color-destructive-foreground)',
+        muted: 'var(--color-muted)',
+        'muted-foreground': 'var(--color-muted-foreground)',
+        border: 'var(--color-border)',
       },
       borderRadius: {
         'DEFAULT': '0.125rem',

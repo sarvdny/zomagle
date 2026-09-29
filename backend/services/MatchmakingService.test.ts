@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { MatchmakingService } from '../../server/services/MatchmakingService.js';
-import { SessionService } from '../../server/services/SessionService.js';
-import { runtimeState } from '../../server/state/RuntimeState.js';
+import { MatchmakingService } from '../services/MatchmakingService.js';
+import { SessionService } from '../services/SessionService.js';
+import { runtimeState } from '../state/RuntimeState.js';
 
 describe('MatchmakingService', () => {
   beforeEach(() => {

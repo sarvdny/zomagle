@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { QueueService } from '../../server/services/QueueService.js';
-import { runtimeState } from '../../server/state/RuntimeState.js';
+import { QueueService } from '../services/QueueService.js';
+import { runtimeState } from '../state/RuntimeState.js';
 
 describe('QueueService', () => {
   beforeEach(() => {
